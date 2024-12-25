@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Welcome to the Simple Calculator</h1>
+    <caption> Calculate your computations</caption> <br>
+
+    <h3> Lets Add Numbers</h3>
+    <label for="fnum">First Number</label>
+    <input type="text" id="fnum" name="fnum"><br><br>
+
+    <label for="snum">Second Number</label>
+    <input type="text" id="snum" name="snum"><br><br>
+
+    <button id="addbutton" type="button" onclick = "add()">Add</button>
+
+    <button id="subtractbutton" type="button" onclick = "subtract()">Subtract</button>
+
+    <button id="Multiplybutton" type="button" onclick = "Multiply()">Multiply</button>
+
+    <button id="dividebutton" type="button" onclick = "Divide()">Divide</button>
+
+    <h3 id="Results" >Results: </h3>
+
+
+
+
+    <script>
+        
+
+        function add() {
+            let first_num = document.getElementById("fnum").value;
+        // console.log("This is your number", first_num);
+        let second_num = document.getElementById("snum").value;
+        // console.log("This is your number", second_num);
+
+            let sum = Number( first_num) +Number( second_num); 
+            console.log(sum)
+            document.getElementById("Results").textContent = "Results: " + sum;
+        }
+
+        function subtract() {
+            let first_num = document.getElementById("fnum").value;
+        // console.log("This is your number", first_num);
+        let second_num = document.getElementById("snum").value;
+        // console.log("This is your number", second_num);
+
+            let diff = Number( first_num) - Number( second_num); 
+            console.log(diff)
+            document.getElementById("Results").textContent = "Results: " + diff;
+        }
+        
+        document.getElementById("subtractbutton").addEventListener("click",subtract);
+
+        function Multiply() {
+            let first_num = document.getElementById("fnum").value;
+        // console.log("This is your number", first_num);
+        let second_num = document.getElementById("snum").value;
+        // console.log("This is your number", second_num);
+
+            let mult = Number( first_num) * Number( second_num); 
+            console.log(mult)
+            document.getElementById("Results").textContent = "Results: " + mult;
+        }
+        
+        document.getElementById("Multiplybutton").addEventListener("click",Multiply);
+
+        function Divide() {
+            let first_num = document.getElementById("fnum").value;
+        // console.log("This is your number", first_num);
+        let second_num = document.getElementById("snum").value;
+        // console.log("This is your number", second_num);
+
+            let divide = Number( first_num) /  Number( second_num); 
+            console.log(divide)
+            document.getElementById("Results").textContent = "Results: " + divide;
+        }
+        
+        document.getElementById("dividebutton").addEventListener("click",Divide);
+
+
+
+
+
+    </script>
+</body>
+</html>
